@@ -1,4 +1,4 @@
-# todo-app2
+# todo-app
 
 > A Vue.js project
 
@@ -19,3 +19,16 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+git repository init
+create a new repository on the command line
+
+``` bash
+echo "# todo-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/amartinm7/todo-app.git
+git push -u origin master
+```
