@@ -1,13 +1,17 @@
 <template>
     <div>
-        // JavaScript expressions in Vue are enclosed in double curly brackets.
-        <p>Completed Tasks: {{todos.filter(todo => {return todo.done === true}).length}}</p>
-        <p>Pending Tasks: {{todos.filter(todo => {return todo.done === false}).length}}</p>
-        <todo v-bind:todo.sync="todoItem"
-              v-for="todoItem in todos"
-              v-bind:key="todoItem.done"
-              v-on:delete-todo="deleteTodo"
-              v-on:complete-todo="completeTodo"/>
+        <div>
+            // JavaScript expressions in Vue are enclosed in double curly brackets.
+            <p>Completed Tasks: {{todos.filter(todo => {return todo.done === true}).length}}</p>
+            <p>Pending Tasks: {{todos.filter(todo => {return todo.done === false}).length}}</p>
+        </div>
+        <div class="flexcontainer">
+            <todo v-bind:todo.sync="todoItem"
+                  v-for="todoItem in todos"
+                  v-bind:key="todoItem.done"
+                  v-on:delete-todo="deleteTodo"
+                  v-on:complete-todo="completeTodo" />
+        </div>
         <div><p>&nbsp;</p></div>
     </div>
 </template>
@@ -52,5 +56,11 @@
 </script>
 
 <style>
-
+.flexcontainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+    width:1200px;
+}
 </style>
